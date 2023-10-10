@@ -1,2 +1,2 @@
 # PHP-DATABASE
- Ligação de PHP com BANCO DE DADOS
+PHP connection with DATABASE
