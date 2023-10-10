@@ -42,7 +42,7 @@ class Pessoa {
 
     public function accessingDataBase() {
         
-        $serverName = "DESKTOP-98L1OCM"; 
+        $serverName = "hidingServer"; 
         $userName = "estudos"; 
         $password = "estudos1234"; 
         $database = "FORMSPHP";       
