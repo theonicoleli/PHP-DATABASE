@@ -71,7 +71,9 @@ class Pessoa {
             // Execute the statement
             $stmt->execute();
 
-            echo "Pessoa adicionada com sucesso.";
+            echo "<div>";
+            echo "<p>Pessoa adicionada com sucesso.</p>";
+            echo "</div>";
 
             // Close the statement and connection
             $stmt->close();
