@@ -3,32 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Testing PHP</title>
+    <style>
+        button {
+            background-color: #007BFF; /* Cor de fundo do botão */
+            color: #fff; /* Cor do texto do botão */
+            padding: 10px 20px; /* Espaçamento interno do botão */
+            border: none; /* Removendo a borda do botão */
+            border-radius: 10px; /* Borda arredondada */
+            transform: translate(0, 200%);
+            cursor: pointer; /* Cursor do mouse */
+            display: flex;
+            margin: auto;
+        }
+
+        /* Estilizando o link dentro do botão */
+        button a {
+            text-decoration: none; /* Removendo a decoração do link */
+            color: #fff; /* Cor do texto do link */
+        }
+
+        /* Estilizando o botão quando o mouse passa por cima */
+        button:hover {
+            background-color: #0056b3; /* Cor de fundo alterada no hover */
+        }
+    </style>
 </head>
 <body>
-    <form method="post" action="../application/Running.php">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-        <br>
 
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-        <br>
+    <button>
+        <a href="http://127.0.0.1/phpEstudos/aula02/src/application/ServerInformation.php">
+            Lista de Pessoas</a>
+    </button>
 
-        <label for="rendimento">Rendimento Mensal:</label>
-        <input type="text" id="rendimento" name="rendimento" required>
-        <br>
-
-        <label for="dependentes">Número de Dependentes:</label>
-        <input type="text" id="dependentes" name="dependentes" required>
-        <br>
-
-        <label for="pensaoAlimenticia">Valor da Pensão Alimentícia:</label>
-        <input type="text" id="pensaoAlimenticia" name="pensaoAlimenticia" required>
-        <br>
-
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
-    </form>
+    <div class="formulario">
+        <form method="post" action="../application/Running.php">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br>
+    
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <br>
+    
+            <label for="rendimento">Rendimento Mensal:</label>
+            <input type="text" id="rendimento" name="rendimento" required>
+            <br>
+    
+            <label for="dependentes">Número de Dependentes:</label>
+            <input type="text" id="dependentes" name="dependentes" required>
+            <br>
+    
+            <label for="pensaoAlimenticia">Valor da Pensão Alimentícia:</label>
+            <input type="text" id="pensaoAlimenticia" name="pensaoAlimenticia" required>
+            <br>
+    
+            <div class="button-container">
+                <input class="enviando" type="submit" value="Enviar">
+                <input class="limpando" type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
 </body>
 </html>

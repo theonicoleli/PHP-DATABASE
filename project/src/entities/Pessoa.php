@@ -6,17 +6,21 @@ class Pessoa {
     private $dependentes;
     private $pensaoAlimenticia;
 
-    public function __construct($nome, $email, $rendimento, $dependentes, $pensaoAlimenticia) {
-        $inputs = [
-            'nome' => $nome,
-            'email' => $email,
-            'rendimento' => $rendimento,
-            'dependentes' => $dependentes,
-            'pensaoAlimenticia' => $pensaoAlimenticia,
-        ];
-    
-        foreach ($inputs as $property => $value) {
-            $this->$property = $value ?? throw new \Exception("Coloque um valor correto para $property.");
+    public function __construct($nome = null, $email = null, $rendimento = null, $dependentes = null, $pensaoAlimenticia = null) {
+        if ($nome !== null) {
+            $this->nome = $nome;
+        }
+        if ($email !== null) {
+            $this->email = $email;
+        }
+        if ($rendimento !== null) {
+            $this->rendimento = $rendimento;
+        }
+        if ($dependentes !== null) {
+            $this->dependentes = $dependentes;
+        }
+        if ($pensaoAlimenticia !== null) {
+            $this->pensaoAlimenticia = $pensaoAlimenticia;
         }
     }
 
@@ -42,7 +46,7 @@ class Pessoa {
 
     public function accessingDataBase() {
         
-        $serverName = "hidingServer"; 
+        $serverName = "DESKTOP-98L1OCM"; 
         $userName = "estudos"; 
         $password = "estudos1234"; 
         $database = "FORMSPHP";       
